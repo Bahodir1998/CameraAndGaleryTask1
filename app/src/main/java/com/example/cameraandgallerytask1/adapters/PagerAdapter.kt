@@ -1,0 +1,16 @@
+package com.example.cameraandgallerytask1.adapters
+
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentActivity
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.cameraandgallerytask1.PagerFragment
+
+class PagerAdapter(fragmentActivity: FragmentActivity):FragmentStateAdapter(fragmentActivity) {
+    override fun getItemCount(): Int {
+        return 4
+    }
+
+    override fun createFragment(position: Int): Fragment {
+        return PagerFragment.newInstance(position)
+    }
+}
